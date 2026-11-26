@@ -1,0 +1,102 @@
+[
+    {
+        "surname": "Тушова",
+        "name": "Светлана",
+        "patronymic": "Дмитриевна",
+        "age": 18,
+        "gender": "Ж",
+        "height": 170.0,
+        "weight": 57.0,
+        "bmi": 19.7
+    },
+    {
+        "surname": "Симкина",
+        "name": "Анастасия",
+        "patronymic": "",
+        "age": 20,
+        "gender": "Ж",
+        "height": 168.0,
+        "weight": 50.0,
+        "bmi": 17.7
+    },
+    {
+        "surname": "Тушов",
+        "name": "Дмитрий",
+        "patronymic": "Алекксеевич",
+        "age": 50,
+        "gender": "М",
+        "height": 175.0,
+        "weight": 90.0,
+        "bmi": 29.4
+    },
+    {
+        "surname": "Дубенцов",
+        "name": "Алексей",
+        "patronymic": "Александрович",
+        "age": 23,
+        "gender": "М",
+        "height": 190.0,
+        "weight": 90.0,
+        "bmi": 24.9
+    },
+    {
+        "surname": "Иванов",
+        "name": "Иван",
+        "patronymic": "Иванович",
+        "age": 18,
+        "gender": "М",
+        "height": 180.0,
+        "weight": 65.0,
+        "bmi": 20.1
+    },
+    {
+        "surname": "Петрова",
+        "name": "Анна",
+        "patronymic": "Сергеевна",
+        "age": 25,
+        "gender": "Ж",
+        "height": 165.0,
+        "weight": 55.0,
+        "bmi": 20.2
+    },
+    {
+        "surname": "Попова",
+        "name": "Елена",
+        "patronymic": "Владимировна",
+        "age": 70,
+        "gender": "Ж",
+        "height": 155.0,
+        "weight": 60.0,
+        "bmi": 25.0
+    },
+    {
+        "surname": "Кузнецов",
+        "name": "Николай",
+        "patronymic": "Олегович",
+        "age": 55,
+        "gender": "М",
+        "height": 170.0,
+        "weight": 95.0,
+        "bmi": 32.9
+    },
+    {
+        "surname": "Сидоров",
+        "name": "Вадим",
+        "patronymic": "Петрович",
+        "age": 35,
+        "gender": "М",
+        "height": 175.0,
+        "weight": 85.0,
+        "bmi": 27.8
+    },
+    {
+        "surname": "Смирнова",
+        "name": "Мария",
+        "patronymic": "Ивановна",
+        "age": 45,
+        "gender": "Ж",
+        "height": 180.0,
+        "weight": 75.0,
+        "bmi": 23.1
+    }
+]
