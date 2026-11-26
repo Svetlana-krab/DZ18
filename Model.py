@@ -1,4 +1,4 @@
-import json
+import json #Формат для хранения списков и словарей
 import os
 
 FILE_NAME = "patients.json"

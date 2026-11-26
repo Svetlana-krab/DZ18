@@ -1,14 +1,16 @@
 import tkinter as tk
 import math
-import re
+import re   # защита точки от двойного ввода и подсчёт процентов
 
+#Работа с главным окном root
 root = tk.Tk()
 root.title("Калькулятор")
 root.configure(bg="#e6f2f8")
 root.geometry("320x500")
-root.resizable(False, False)
+root.resizable(False, False)    #запрет на растяжение окна
 
-is_error_state = False
+#Ввод и валидация
+is_error_state = False  
 
 def validate_input(char):
     return char in "0123456789.+-*/()^%"
@@ -18,7 +20,7 @@ vcmd = (root.register(validate_input), '%S')
 entry = tk.Entry(root, font=("Arial", 20), justify="right", bd=4, relief="ridge", 
                  bg="#ffffff", fg="#2c3e50", validate="key", validatecommand=vcmd)
 entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, sticky="nsew")
-
+#Для размера шрифта
 def adjust_font(event=None):
     text_len = len(entry.get())
     if text_len <= 12:
@@ -40,7 +42,7 @@ def format_result(val):
             res_str = f"{val:.6f}".rstrip('0').rstrip('.')
             return res_str
     return str(val)
-
+#Ввод данных и обработка ошибок
 def press(s):
     global is_error_state
     if is_error_state:
@@ -198,7 +200,7 @@ def create_square_btn(parent, text, cmd, bg_color, fg_color="#2c3e50", font_size
     canvas.bind("<Button-1>", on_click)
     return canvas
 
-# --- Кнопки ---
+# Кнопки
 square_cmd = lambda: press("^2")
 sqrt_cmd = lambda: press("sqrt(")
 
@@ -210,7 +212,7 @@ row5 = [("1", lambda: press("1"), "#b3d9ff"), ("2", lambda: press("2"), "#b3d9ff
 row6 = [("0", lambda: press("0"), "#b3d9ff"), ("%", percent_action, "#b3d9ff"), (".", lambda: press("."), "#b3d9ff"), ("=", calculate, "#3a7bd5", "white")]
 
 grid_data = [row1, row2, row3, row4, row5, row6]
-
+#Цикл для азмещения кнопок в цикл
 for r, row in enumerate(grid_data):
     for c, btn_data in enumerate(row):
         if len(btn_data) == 4:
@@ -225,7 +227,7 @@ for r, row in enumerate(grid_data):
 root.grid_rowconfigure(0, weight=1)
 for i in range(1, 7): root.grid_rowconfigure(i, weight=0)
 for i in range(4): root.grid_columnconfigure(i, weight=1)
-
+#Для привязки клавиатуры
 entry.focus_set()
 
 root.bind("<Button-1>", lambda e: root.focus_set() if e.widget == root else None)
